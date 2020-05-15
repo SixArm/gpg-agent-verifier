@@ -44,7 +44,7 @@ if ! test -v GPG_AGENT_INFO; then
     else
         mkdir /tmp/.gpg-agent-$USER
         chmod 700 /tmp/.gpg-agent-$USER
-        gpg-agent --daemon --write-env-file /tmp/.gpg-agent-$USER/env
+        gpg-agent --daemon /tmp/.gpg-agent-$USER/env
         . /tmp/.gpg-agent-$USER/env
     fi
     # The env file doesn't include an export statement
